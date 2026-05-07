@@ -1,6 +1,6 @@
 # ψ-Slack: Selective Hubness Correction via Boundary-Localization Certificates
 
-Anonymized code for the NeurIPS 2026 submission *"Reranking Acts at the Boundary: Selective Hubness Correction via ψ-Slack"*.
+Code for the NeurIPS 2026 submission *"Reranking Acts at the Boundary: Selective Hubness Correction via ψ-Slack"*.
 
 We study four training-free additive hubness rerankers (CSLS, QB-Norm, DB-Norm, NNN) for cross-modal retrieval and show they are **boundary-localized**: a top-1 change can occur only when the cosine margin is smaller than a per-query *ψ-slack* quantity. This yields a three-tier certificate hierarchy with sound, parameter-free no-op guarantees for R@1, R@K, MRR@K, and nDCG@K. On a 543K-gallery LAION benchmark the global certificate skips 25–36% of CSLS/NNN reranks losslessly, and the exact max-form certifies 68–91% of fixed top-50 pool outputs unchanged at exact pool fidelity (3.07–10.32× reranker-stage speedup over pool reranking).
 
