@@ -118,9 +118,6 @@ Legacy alias: `python experiments/compute_order_invariance.py` forwards to `orde
 
 `experiments/laion_gating_comparison.py` uses streaming evaluation when `N_q × N_g × 4` bytes exceed `--max-sims-gb`; use a GPU with enough VRAM for ψ passes or reduce splits. **ANN / approximate nearest-neighbour matched-skip tooling** (FAISS / HNSW-style pipelines) is **not included** in this repository; this bundle covers subset construction, embedding caching, and ψ-slack / certificate analyses on **frozen NPZs**.
 
-## Not bundled here
-
-**SRP / matched abstention / ranking disagreement** stacks that pull large auxiliary dependencies are **not** copied here to keep the install footprint small.
 
 ## Citation
 
