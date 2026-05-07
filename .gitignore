@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+evaluation_results/**/*.npz
+!evaluation_results/.gitkeep
+temp_gpu_*.py

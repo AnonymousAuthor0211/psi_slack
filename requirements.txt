@@ -1,0 +1,11 @@
+# Minimal deps mirror pyproject.toml — prefer:
+#   pip install -e .
+#
+# LAION subset tooling + OpenCLIP caching:
+#   pip install -e ".[embed,laion_data]"
+#
+numpy>=1.20
+torch>=1.12
+scikit-learn>=1.0
+matplotlib>=3.5
+tqdm>=4.60

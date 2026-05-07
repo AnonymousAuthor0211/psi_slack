@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "psi-slack-experiments"
+version = "0.1.0"
+description = "Reproducible ψ-slack, no-op certificates, margin vs ψ gates, LAION selective reranking"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.20",
+  "torch>=1.12",
+  "scikit-learn>=1.0",
+  "matplotlib>=3.5",
+  "tqdm>=4.60",
+]
+
+[project.optional-dependencies]
+embed = [
+  "datasets>=2.14",
+  "transformers>=4.30",
+  "open_clip_torch>=2.20",
+  "timm>=0.9",
+  "Pillow>=9",
+]
+# LAION-2B-en → laion_sample pipeline + metadata sampling (scripts/laion/*)
+laion_data = [
+  "datasets>=2.14",
+  "huggingface_hub>=0.16",
+  "pandas>=1.5",
+  "pyarrow>=12",
+  "tqdm>=4.60",
+  "Pillow>=9",
+]
+# img2dataset / webdataset are installed separately (CLI); pin versions in paper freeze.
+xgboost = ["xgboost>=2.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["psi_slack_pkg*"]
